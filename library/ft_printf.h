@@ -13,5 +13,6 @@ int 	ft_argument_u(unsigned int nbr);
 int		ft_arguments_x(unsigned long int nbr, char type);
 int		ft_is_argument(char a);
 int		ft_nbrlen(long int nbr);
+void	ft_free_ptr(char **ptr);
 
 #endif
