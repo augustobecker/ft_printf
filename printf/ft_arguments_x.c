@@ -50,9 +50,9 @@ static char ft_hexa_converter(char digit, char type)
 	return (0);
 }
 
-int ft_arguments_x(unsigned long int nbr, char type)
+int ft_arguments_x(unsigned int nbr, char type)
 {
-	unsigned long int	aux;
+	unsigned int		aux;
 	int 				size;
 	char				*num;
 	int					i;
