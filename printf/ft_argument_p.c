@@ -27,8 +27,8 @@ static int	ft_argument_size(unsigned long long int nbr)
 
 static int	ft_long_argument_p(unsigned long long int nbr)
 {
-	char						*num;
-	int							i;
+	char		*num;
+	int		i;
 
 	i = 0;
 	if (!nbr)
