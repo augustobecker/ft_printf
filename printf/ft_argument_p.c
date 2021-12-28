@@ -1,23 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_argument_p.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 19:00:10 by acesar-l          #+#    #+#             */
+/*   Updated: 2021/12/28 20:00:41 by acesar-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static int ft_long_argument_p(unsigned long long int nbr)
+static int	ft_argument_size(unsigned long long int nbr)
 {
-	unsigned long long int		aux;
-	int 						          size;
-	char						          *num;
-	int						          	i;
+	int	size;
 
-	aux = nbr;
 	size = 0;
+	while (nbr > 0)
+	{
+		nbr /= 16;
+		size++;
+	}
+	return (size);
+}
+
+static int	ft_long_argument_p(unsigned long long int nbr)
+{
+	char						*num;
+	int							i;
+
 	i = 0;
 	if (!nbr)
 		return (ft_putchar_bw('0'));
-	while (aux > 0)
-	{
-		aux /= 16;
-		size++;
-	}
-	num = (char *) malloc((size + 1) * sizeof(char));
+	num = (char *)malloc(((ft_argument_size(nbr)) + 1) * sizeof(char));
 	while (nbr)
 	{
 		num[i] = ft_hexa_converter(nbr % 16, 'x');
@@ -32,17 +48,17 @@ static int ft_long_argument_p(unsigned long long int nbr)
 	return (i);
 }
 
-int ft_argument_p(unsigned long long int address)
+int	ft_argument_p(unsigned long long int address)
 {
-	int bytes;
+	int	bytes;
 
 	if (!address)
 	{
-		ft_putstr_fd("(nil)" , 1);
+		ft_putstr_fd("(nil)", 1);
 		bytes = 5;
 		return (bytes);
 	}
-	ft_putstr_fd("0x" , 1);
+	ft_putstr_fd("0x", 1);
 	bytes = 2;
 	bytes += ft_long_argument_p(address);
 	return (bytes);
