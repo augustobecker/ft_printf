@@ -28,8 +28,8 @@ static int	ft_argument_size(unsigned int nbr)
 int	ft_arguments_x(unsigned int nbr, char type)
 {
 	char	*num;
-	int		size;
-	int		i;
+	int	size;
+	int	i;
 
 	i = 0;
 	if (!nbr)
