@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_hexa_converter.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 19:13:28 by acesar-l          #+#    #+#             */
+/*   Updated: 2021/12/14 19:13:37 by acesar-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-char ft_hexa_converter(char digit, char type)
+char	ft_hexa_converter(char digit, char type)
 {
-	int capitalize;
+	int	capitalize;
 
 	capitalize = 0;
 	if (type == 'X')
