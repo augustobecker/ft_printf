@@ -1,5 +1,7 @@
 <h1 align="center"> ft_printf - @42sp </h1>
 
+<p align="center">:information_source: A library that contains ft_printf, a function that will mimic the real printf </p>
+
 ## Index
 * [What is ft_printf?](#what-is-ft-printf)
 * [How does it work?](#how-does-it-work)
