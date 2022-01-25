@@ -2,6 +2,8 @@
 
 <p align="center">:information_source: A library that contains ft_printf, a function that will mimic the real printf </p>
 
+<p align="center"><a href="https://github.com/augustobecker/ft_printf/blob/main/README-ptbr.md" target="_blank"><img src="https://img.shields.io/badge/dispon%C3%ADvel%20tamb%C3%A9m%20em-PT--BR-yellow"></a></p>
+
 ## Index
 * [What is ft_printf?](#what-is-ft-printf)
 * [Requirements](#requirements)
