@@ -16,7 +16,7 @@
 
 <h2 align="center" id="o-que-e-ft_printf"> O que é ft_printf? </h2>
 
-O terceiro projeto na 42. É uma função em C que recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados e -1 para erro. É uma função extremamente útil e pode ser usada em projetos futuros dentro da 42 - uma vez que faz uma série de conversões (para decimal e hexadecimal) além de facilitar muito o output, que antes precisava ser feito com a system call <strong>write</strong> (que torna printar um simples int uma tarefa de uns bons minutos uma vez que só consegue printar os números de 0 a 9).
+O terceiro projeto na 42. 
 
 <h2 align="center" id="requisitos"> Requisitos </h2>
 
@@ -44,6 +44,64 @@ A Norma é um padrão de programação que define um conjunto de regras a seguir
 
 <p align="center"> :sparkles: <strong>Para este projeto fomos apresentados ao conceito de funções de argumentos variáveis.</strong> :sparkles:</p>
 
+É uma função em C que recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados e -1 para erro. É uma função extremamente útil e pode ser usada em projetos futuros dentro da 42 - uma vez que faz uma série de conversões (para decimal e hexadecimal) além de facilitar muito o output, que antes precisava ser feito com a system call <strong>write</strong> (que torna printar um simples int uma tarefa de uns bons minutos uma vez que só consegue printar os números de 0 a 9).    
+    
 <h2 align="center" id="como-eu-uso-a-biblioteca"> Como eu uso a Biblioteca? </h2>
+O objetivo é criar uma bilioteca chamada libftprintf.a feita com os arquivos fonte.
+
+Para criar a biblioteca, clone o projeto:
+
+    git clone https://github.com/augustobecker/ft_printf ft_printf
+Entre no repositório:
+
+    cd ft_printf
+Rode o comando Make (para executar o Makefile que vai compilar o código fonte e criar a biblioteca):
+
+    make
+
+Você deve ver um arquivo libftprintf.a e alguns arquivos objeto (.o).
+
+Agora, para limpar tudo (remover os arquivos .o), use make clean:
+
+    make clean
+Agora, só precisa adicionar esse cabeçalho nos seus arquivos .c e usar as funções da Libftprintf:
+
+    #include "ft_printf.h"
+Se tentar compilar seus arquivos com clang usando "clang exemplo.c" vai receber um erro de undefined symbol para as funções da biblioteca.
+
+Você deve mostrar o caminho para sua biblioteca e qual é a biblioteca:
+
+    clang exemplo.c -L library -lftprintf
+
+-L mostra o caminho para sua biblioteca (.) nesse caso
+
+-l Recebe o nome da biblioteca. Essa é a sequência de caracteres que vem após o lib no nome da sua biblioteca lib<strong>ftprintf</strong>.
+
+É isso, agora basta executar com ./a.out
 
 <h2 align="center" id="como-eu-testo"> Como eu testo? </h2>
+
+Para testar o código vamos usar um Tester para a ft_printf feito pelo @jgambard. Há vários outros bons testers mas hoje vou cobrir apenas esse.
+
+Para testar o código desse repositório:
+Clone o repositório e entre nele:
+
+    git clone https://github.com/augustobecker/ft_printf ft_printf
+      
+    cd ft_print/
+ 
+Agora, clone o Print Tester do @jgambard
+    
+    git clone https://github.com/Tripouille/printfTester printfTester
+Entre na pasta do Tester e rode o teste mandatório:
+
+    cd printfTester
+    make m
+
+Caso o seu projeto ou um outro que vá avaliar tenha bônus, rode o teste do bônus também:
+    
+    make b
+    
+Se você fez tudo corretamente, deve ver algo como isso:
+ ![68747470733a2f2f692e696d6775722e636f6d2f556549375048612e706e67](https://user-images.githubusercontent.com/81205527/151406246-07d3bf2b-9c63-4f00-aca9-266f2ee32034.png)
+
