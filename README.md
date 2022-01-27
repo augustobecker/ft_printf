@@ -73,3 +73,23 @@ You have to tell the file where your library resides and which library it's usin
 That's it. Now run it using ./a.out
 
 <h2 align="center" id="how-do-i-test-it"> How do I test it? </h2>
+
+To test the code we're going to be using @jgambard's Printf Tester. There are some good others but I'll only be covering this one.
+
+To test the code in this repo
+Clone this repo and cd into it:
+
+    git clone https://github.com/augustobecker/ft_printf ft_printf
+      
+    cd ft_printf/
+ 
+Now, clone @jgambard's Libft Tester
+    
+    git clone https://github.com/Tripouille/printfTester.git printfTester
+Go into the test folder and run the mandatory test:
+
+    cd printfTester
+    make m
+    
+If you did everything correctly you should see something like this:
+    ![68747470733a2f2f692e696d6775722e636f6d2f556549375048612e706e67](https://user-images.githubusercontent.com/81205527/151406246-07d3bf2b-9c63-4f00-aca9-266f2ee32034.png)
