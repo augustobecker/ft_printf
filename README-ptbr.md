@@ -16,7 +16,7 @@
 
 <h2 align="center" id="o-que-e-ft_printf"> O que é ft_printf? </h2>
 
-O terceiro projeto na 42. 
+O terceiro projeto na 42. A ft_printf é uma biblioteca estática que contém a função ft_printf e também as funções padrão da linguagem C recriadas na biblioteca Libft (o primeiro projeto da 42) - que serve de apoio pela primeira vez em outro projeto para mim. É uma função extremamente útil e pode ser usada em projetos futuros dentro da 42 - uma vez que faz uma série de conversões (para decimal e hexadecimal) além de facilitar muito o output, que antes precisava ser feito com a system call <strong>write</strong> (que torna printar um simples int uma tarefa de uns bons minutos uma vez que só consegue printar os números de 0 a 9, agora imagine printar um endereço de memória em hexadecimal que em int seria perto de 93 trilhões).
 
 <h2 align="center" id="requisitos"> Requisitos </h2>
 
@@ -44,7 +44,25 @@ A Norma é um padrão de programação que define um conjunto de regras a seguir
 
 <p align="center"> :sparkles: <strong>Para este projeto fomos apresentados ao conceito de funções de argumentos variáveis.</strong> :sparkles:</p>
 
-É uma função em C que recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados e -1 para erro. É uma função extremamente útil e pode ser usada em projetos futuros dentro da 42 - uma vez que faz uma série de conversões (para decimal e hexadecimal) além de facilitar muito o output, que antes precisava ser feito com a system call <strong>write</strong> (que torna printar um simples int uma tarefa de uns bons minutos uma vez que só consegue printar os números de 0 a 9).    
+A função printf é uma das mais conhecidas e usadas na linguagem para dar um output. Ela recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados e -1 para erro. Para criar com uma função desse jeito precisamos que tenha argumentos variáveis, o que é possível conseguir usando o cabeçalho <stdarg.h> e parâmetros como va_arg para os argumentos da lista em ordem de ocorrência ou va_start e va_end para iniciar e encerrar o uso da lista de argumentos.
+    
+Para cada uma das conversões requeridas pelo subject que a ft_printf fizesse, há uma função que converte o argumento e retorna os bytes escritos, são elas:
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_argument_c.c">%c</a> printa um único caracter.
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_argument_s.c">%s</a> printa uma string.
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_argument_p.c">%p</a> O argumento void * pointer é printado em hexadecimal.
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_arguments_d_i.c">%d</a> printa um número decimal (base 10).
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_arguments_d_i.c">%i</a> printa um inteiro em base 10.
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_argument_u.c">%u</a> printa um número decimal (base 10) unsigned.
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_arguments_x.c">%x</a> printa um número em hexadecimal (base 16).
+    
+• <a href="https://github.com/augustobecker/ft_printf/blob/main/printf/ft_argument_percent.c">%%</a> printa um sinal de porcentagem.
     
 <h2 align="center" id="como-eu-uso-a-biblioteca"> Como eu uso a Biblioteca? </h2>
 O objetivo é criar uma bilioteca chamada libftprintf.a feita com os arquivos fonte.
