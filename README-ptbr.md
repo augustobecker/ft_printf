@@ -38,13 +38,17 @@ A Norma é um padrão de programação que define um conjunto de regras a seguir
   O repositório está disponível em https://github.com/42School/norminette
   
   Além da norma padrão, o projeto tem alguns requisitos próprios
+   
+    Usar o comando libtool para criar a biblioteca é proibido.
+    
+    O Makefile deve compilar com as flags -Wall, -Wextra e -Werror
   
     
 <h2 align="center" id="como-funciona"> Como funciona? </h2>
 
 <p align="center"> :sparkles: <strong>Para este projeto fomos apresentados ao conceito de funções de argumentos variáveis.</strong> :sparkles:</p>
 
-A função printf é uma das mais conhecidas e usadas na linguagem para dar um output. Ela recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados e -1 para erro. Para criar com uma função desse jeito precisamos que tenha argumentos variáveis, o que é possível conseguir usando o cabeçalho <stdarg.h> e parâmetros como va_arg para os argumentos da lista em ordem de ocorrência ou va_start e va_end para iniciar e encerrar o uso da lista de argumentos.
+A função printf é uma das mais conhecidas e usadas na linguagem para dar um output. Ela recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados ou -1 para erro. Para criar com uma função desse jeito precisamos que tenha argumentos variáveis, o que é possível conseguir usando o cabeçalho <stdarg.h> e parâmetros como va_arg para os argumentos da lista em ordem de ocorrência ou va_start e va_end para iniciar e encerrar o uso da lista de argumentos.
     
 Para cada uma das conversões requeridas pelo subject que a ft_printf fizesse, há uma função que converte o argumento e retorna os bytes escritos, são elas:
     
