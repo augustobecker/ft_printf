@@ -4,7 +4,7 @@
 
 <p align="center"><a href="https://www.42sp.org.br/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=SP&color=000&style=for-the-badge&logo=42""></a></p>
 
-<p align="center"><a href="https://github.com/augustobecker/ft_printf/edit/main/README.md"><img src="https://img.shields.io/badge/available%20in-EN-blue"></a></p>
+<p align="center"><a href="https://github.com/augustobecker/ft_printf/blob/main/README.md"><img src="https://img.shields.io/badge/available%20in-EN-blue"></a></p>
 
 ## Índice
 
