@@ -13,6 +13,7 @@
 * [Como funciona?](#como-funciona)
 * [Como eu uso a Biblioteca?](#como-eu-uso-a-biblioteca)
 * [Como eu testo?](#como-eu-testo)
+* [Autor](#autor)
 
 <h2 align="center" id="o-que-e-ft_printf"> O que é ft_printf? </h2>
 
@@ -48,7 +49,7 @@ A Norma é um padrão de programação que define um conjunto de regras a seguir
 
 <p align="center"> :sparkles: <strong>Para este projeto fomos apresentados ao conceito de funções de argumentos variáveis.</strong> :sparkles:</p>
 
-A função printf é uma das mais conhecidas e usadas na linguagem para dar um output. Ela recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados ou -1 para erro. Para criar com uma função desse jeito precisamos que tenha argumentos variáveis, o que é possível conseguir usando o cabeçalho <stdarg.h> e parâmetros como va_arg para os argumentos da lista em ordem de ocorrência ou va_start e va_end para iniciar e encerrar o uso da lista de argumentos.
+A função printf é uma das mais conhecidas e usadas na linguagem para dar um output. Ela recebe uma string como argumento, essa string pode conter alguns placeholders (como %c para caracteres ou %s para strings) cujos valores originais são passados como argumentos. A ft_printf tem argumentos variáveis, sendo o único obrigatório a string que vai ser printada, de resto depende de quantos placeholders são passados nesssa string. O retorno da função é o número de caracteres printados ou -1 para erro. Para criar com uma função desse jeito precisamos que tenha argumentos variáveis, o que é possível usando o cabeçalho <stdarg.h> e parâmetros como va_arg para os argumentos da lista em ordem de ocorrência ou va_start e va_end para iniciar e encerrar o uso da lista de argumentos.
     
 Para cada uma das conversões requeridas pelo subject que a ft_printf fizesse, há uma função que converte o argumento e retorna os bytes escritos, são elas:
     
@@ -127,3 +128,15 @@ Caso o seu projeto ou um outro que vá avaliar tenha bônus, rode o teste do bô
 Se você fez tudo corretamente, deve ver algo como isso:
  ![68747470733a2f2f692e696d6775722e636f6d2f556549375048612e706e67](https://user-images.githubusercontent.com/81205527/151406246-07d3bf2b-9c63-4f00-aca9-266f2ee32034.png)
 
+<h2 align="center" id="autor"> Autor </h2>
+<div>
+    <img height="180em" src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png">
+    
+<strong> Augusto Becker | acesar-l | 🇧🇷👨‍🚀</strong>
+    
+:wave: Fale comigo: 
+    
+  <a href = "mailto:augustobecker.dev@gmail.com"><img src="https://img.shields.io/badge/augustobecker.dev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"> </a>
+  <a href="https://www.linkedin.com/in/augusto-becker/" target="_blank"><img src="https://img.shields.io/badge/-Augusto Becker-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+  <a href="https://www.instagram.com/augusto.becker/" target="_blank"><img src="https://img.shields.io/badge/-augusto.becker-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+</div>
