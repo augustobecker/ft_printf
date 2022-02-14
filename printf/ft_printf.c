@@ -24,7 +24,7 @@ static int	ft_check_arguments(va_list arg, char c)
 	if (c == 's')
 		bytes += ft_argument_s(va_arg(arg, char *));
 	if (c == 'p')
-		bytes += ft_argument_p(va_arg(arg, unsigned long long int));
+		bytes += ft_argument_p(va_arg(arg, unsigned long));
 	if (c == 'd' || c == 'i')
 		bytes += ft_arguments_d_i(va_arg(arg, int));
 	if (c == 'u')
