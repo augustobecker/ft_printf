@@ -6,13 +6,13 @@
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:00:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2021/12/28 20:00:41 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/02/14 13:16:41 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_argument_size(unsigned long long int nbr)
+static int	ft_argument_size(unsigned long nbr)
 {
 	int	size;
 
@@ -25,7 +25,7 @@ static int	ft_argument_size(unsigned long long int nbr)
 	return (size);
 }
 
-static int	ft_long_argument_p(unsigned long long int nbr)
+static int	ft_long_argument_p(unsigned long nbr)
 {
 	char		*num;
 	int		i;
@@ -48,7 +48,7 @@ static int	ft_long_argument_p(unsigned long long int nbr)
 	return (i);
 }
 
-int	ft_argument_p(unsigned long long int address)
+int	ft_argument_p(unsigned long address)
 {
 	int	bytes;
 
