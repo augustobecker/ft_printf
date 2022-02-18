@@ -37,7 +37,7 @@ SRCS 		= ${SRCS_PATH}/ft_printf.c			\
 			${SRCS_PATH}/ft_decimal_length.c		\
 			${SRCS_PATH}/ft_free_ptr.c			\
 			${SRCS_PATH}/ft_revert_str.c			\
-			${SRCS_PATH}/ft_hex_in_decimal_length.c 	\
+			${SRCS_PATH}/ft_hex_length.c 	\
 			${SRCS_PATH}/ft_hex_converter_to_decimal.c
 			
 OBJS 		= $(SRCS:.c=.o)
