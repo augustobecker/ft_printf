@@ -6,7 +6,7 @@
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:04:59 by acesar-l          #+#    #+#             */
-/*   Updated: 2021/12/14 19:05:01 by acesar-l         ###   ########.fr       */
+/*   Updated: 2021/12/18 15:05:01 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ static void	ft_put_unsigned_nbr(unsigned int nb)
 int	ft_argument_u(unsigned int nbr)
 {
 	ft_put_unsigned_nbr(nbr);
-	return (ft_nbrlen(nbr));
+	return (ft_decimal_lentgh(nbr));
 }
