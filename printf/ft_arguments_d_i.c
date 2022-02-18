@@ -6,7 +6,7 @@
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:05:57 by acesar-l          #+#    #+#             */
-/*   Updated: 2021/12/14 19:05:58 by acesar-l         ###   ########.fr       */
+/*   Updated: 2021/02/18 13:45:58 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ static void	ft_putnbr(int nb)
 int	ft_arguments_d_i(int c)
 {
 	ft_putnbr(c);
-	return (ft_nbrlen(c));
+	return (ft_decimal_length(c));
 }
