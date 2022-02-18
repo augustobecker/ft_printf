@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexa_size.c                                     :+:      :+:    :+:   */
+/*   ft_hex_length.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 12:56:00 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/02/18 12:57:02 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/02/18 13:35:02 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexa_size(unsigned int nbr)
+int	ft_hex_length(unsigned int nbr)
 {
-	int	size;
+	int	length;
 
-	size = 0;
+	length = 0;
 	while (nbr > 0)
 	{
 		nbr /= 16;
-		size++;
+		length++;
 	}
-	return (size);
+	return (length);
 }
