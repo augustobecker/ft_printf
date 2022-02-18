@@ -28,6 +28,6 @@ int   ft_decimal_length(long int nbr);
 void  ft_free_ptr(char **ptr);
 char  *ft_revert_str(char *str);
 char  ft_hex_converter_to_decimal(char digit, char type);
-int   ft_hex_in_decimal_length(unsigned int nbr);
+int   ft_hex_length(unsigned int nbr);
 
 #endif
