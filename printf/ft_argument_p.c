@@ -25,14 +25,17 @@ static int	ft_argument_size(unsigned long nbr)
 	return (size);
 }
 
-static int	ft_long_argument_p(unsigned long nbr)
+static int	ft_argument_p(unsigned long nbr)
 {
 	char		*num;
 	int		i;
+	int		bytes;
 
 	i = 0;
+	bytes = 0;
 	if (!nbr)
-		return (ft_putchar_bw('0'));
+		return (write(1, "0x0", sizeof(char) * 3));
+	bytes = write(1, "0x", sizeof(char) * 2);
 	num = (char *)malloc(((ft_argument_size(nbr)) + 1) * sizeof(char));
 	while (nbr)
 	{
@@ -43,23 +46,8 @@ static int	ft_long_argument_p(unsigned long nbr)
 	num[i] = '\0';
 	ft_revstr(num);
 	ft_putstr_fd(num, 1);
-	i = ft_strlen(num);
+	bytes += ft_strlen(num);
 	ft_free_ptr(&num);
-	return (i);
-}
-
-int	ft_argument_p(unsigned long address)
-{
-	int	bytes;
-
-	if (!address)
-	{
-		ft_putstr_fd("(nil)", 1);
-		bytes = 5;
-		return (bytes);
-	}
-	ft_putstr_fd("0x", 1);
-	bytes = 2;
-	bytes += ft_long_argument_p(address);
 	return (bytes);
 }
+
