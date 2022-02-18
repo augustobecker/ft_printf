@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   ft_decimal_length.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:15:53 by acesar-l          #+#    #+#             */
-/*   Updated: 2021/12/14 19:15:55 by acesar-l         ###   ########.fr       */
+/*   Updated: 2021/12/18 14:15:55 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_nbrlen(long int nbr)
+int	ft_decimal_length(long int nbr)
 {
 	int	length;
 
