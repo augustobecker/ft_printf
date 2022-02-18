@@ -15,11 +15,10 @@
 int	ft_argument_p(unsigned long nbr)
 {
 	char		*num;
-	int		i;
 	int		bytes;
+	int		i;
 
 	i = 0;
-	bytes = 0;
 	if (!nbr)
 		return (write(1, "0x0", sizeof(char) * 3));
 	bytes = write(1, "0x", sizeof(char) * 2);
