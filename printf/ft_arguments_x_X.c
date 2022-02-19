@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arguments_x_X.c                                 :+:      :+:    :+:   */
+/*   ft_arguments_x.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_arguments_x_X(unsigned int nbr, char type)
+int	ft_arguments_x(unsigned int nbr, char type)
 {
 	char	*num;
 	int	bytes;
@@ -24,7 +24,7 @@ int	ft_arguments_x_X(unsigned int nbr, char type)
 	num = (char *)malloc((ft_hex_length(nbr) + 1) * sizeof(char));
 	while (nbr)
 	{
-		num[i] = ft_hex_converter_to_decimal(nbr % 16, type);
+		num[i] = ft_decimal_converter_to_hex(nbr % 16, type);
 		nbr /= 16;
 		i++;
 	}
