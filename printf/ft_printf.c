@@ -30,7 +30,7 @@ static int	ft_check_arguments(va_list arg, char c)
 	if (c == 'u')
 		bytes += ft_argument_u(va_arg(arg, int));
 	if (c == 'x' || c == 'X')
-		bytes += ft_arguments_x_X(va_arg(arg, unsigned int), c);
+		bytes += ft_arguments_x(va_arg(arg, unsigned int), c);
 	return (bytes);
 }
 
