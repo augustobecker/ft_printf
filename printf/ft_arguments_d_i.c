@@ -31,8 +31,8 @@ static void	ft_putnbr(int nbr)
 		ft_putchar_fd(nbr + 48 + sum, 1);
 	else
 	{
-		ft_putnbrr(nbr / 10);
-		ft_putnbrr(nbr % 10 + sum);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10 + sum);
 	}	
 }
 
