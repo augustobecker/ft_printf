@@ -24,7 +24,7 @@ FLAGS 		= -Wall -Werror -Wextra
 REMOVE 		= rm -f
 INCLUDE 	= -I ${LIB_PATH}
 
-SRCS_PATH	= ./ft_printf
+SRCS_PATH	= ./printf
 SRCS 		= ${SRCS_PATH}/ft_printf.c			\
 			${SRCS_PATH}/ft_argument_c.c			\
 			${SRCS_PATH}/ft_arguments_d_i.c			\
