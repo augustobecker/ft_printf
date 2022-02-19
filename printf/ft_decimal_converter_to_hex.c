@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex_converter_to_decimal.c                      :+:      :+:    :+:   */
+/*   ft_decimal_converter_to_hex.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:13:28 by acesar-l          #+#    #+#             */
-/*   Updated: 2021/12/18 14:13:37 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/02/18 21:03:25 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	ft_hex_converter_to_decimal(char digit, char type)
+char	ft_decimal_converter_to_hex(char digit, char type)
 {
 	int	capitalize;
 
