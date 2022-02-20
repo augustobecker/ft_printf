@@ -53,7 +53,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			bytes += write(1, &c, sizeof(char));
+			bytes += write(1, &str[i], sizeof(char));
 		i++;
 	}
 	va_end(arg);
