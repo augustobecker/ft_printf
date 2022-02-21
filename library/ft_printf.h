@@ -28,7 +28,7 @@ int   ft_is_argument(char a);
 int   ft_decimal_length(long int nbr);
 void  ft_free_ptr(char **ptr);
 char  *ft_revert_str(char *str);
-char  ft_hex_converter_to_decimal(char digit, char type);
+char  ft_decimal_converter_to_hex(char digit, char type);
 int   ft_hex_length(unsigned int nbr);
 
 #endif
