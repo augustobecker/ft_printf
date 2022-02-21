@@ -20,7 +20,7 @@ int	ft_argument_p(unsigned long address)
 
 	i = 0;
 	if (!address)
-		return (write(1, "0x0", sizeof(char) * 3));
+		return (write(1, "(nil)", sizeof(char) * 5));
 	bytes = write(1, "0x", sizeof(char) * 2);
 	num = (char *)malloc(((ft_hex_length(address)) + 1) * sizeof(char));
 	while (address)
