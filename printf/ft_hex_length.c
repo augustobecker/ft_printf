@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_hex_length(unsigned int nbr)
+int	ft_hex_length(unsigned long nbr)
 {
 	int	length;
 
