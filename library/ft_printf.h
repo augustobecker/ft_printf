@@ -29,6 +29,6 @@ int   ft_decimal_length(long int nbr);
 void  ft_free_ptr(char **ptr);
 char  ft_decimal_converter_to_hex(char digit, char type);
 int   ft_hex_length(unsigned long nbr);
-int   ft_print_reversed_str(char *str)
+int   ft_print_reversed_str(char *str);
 
 #endif
