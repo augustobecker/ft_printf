@@ -29,9 +29,7 @@ int	ft_arguments_x(unsigned int nbr, char type)
 		i++;
 	}
 	num[i] = '\0';
-	ft_revert_str(num);
-	ft_putstr_fd(num, 1);
-	bytes = ft_strlen(num);
+	bytes += ft_print_reversed_str(num);
 	ft_free_ptr(&num);
 	return (bytes);
 }
