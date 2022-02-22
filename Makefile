@@ -6,7 +6,7 @@
 #    By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/28 20:37:12 by acesar-l          #+#    #+#              #
-#    Updated: 2022/02/19 16:23:44 by acesar-l         ###   ########.fr        #
+#    Updated: 2022/02/22 04:23:44 by acesar-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRCS 		= ${SRCS_PATH}/ft_printf.c			\
 		${SRCS_PATH}/ft_argument_u.c			\
 		${SRCS_PATH}/ft_arguments_x.c			\
 		${SRCS_PATH}/ft_is_argument.c			\
-		${SRCS_PATH}/ft_revert_str.c			\
+		${SRCS_PATH}/ft_print_reversed_str.c		\
 		${SRCS_PATH}/ft_free_ptr.c			\
 		${SRCS_PATH}/ft_hex_length.c			\
 		${SRCS_PATH}/ft_decimal_length.c		\
