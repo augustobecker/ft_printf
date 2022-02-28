@@ -32,7 +32,7 @@ SRCS 		= ft_atoi.c 		\
 		ft_isalnum.c 		\
 		ft_isalpha.c 		\
 		ft_isascii.c 		\
-		ft_isdigit.c 		\
+		ft_isdigit.c 		\		
 		ft_isprint.c 		\
 		ft_itoa.c 		\
 		ft_memchr.c		\
@@ -78,16 +78,17 @@ BONUS_OBJS 	= $(BONUS_SRCS:.c=.o)
 all:		${NAME}
 
 ${NAME}: 	${OBJS}
+		@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 		ar -rcs ${NAME} ${OBJS}
-		@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)\n"
 
 bonus:		${NAME} ${BONUS_OBJS}
+		@echo "\n$(NAME): $(GREEN)$(NAME) was created with Bonus$(RESET)"
 		ar -rcs ${NAME} ${BONUS_OBJS}
-		@echo "\n$(NAME): $(GREEN)$(NAME) was created with Bonus$(RESET)\n"
+		@echo
 
 .c.o:
-		${CC} ${FLAGS} -c $< -o ${<:.c=.o} ${INCLUDE}
 		@echo "\n$(NAME): $(GREEN)object files were created$(RESET)"
+		${CC} ${FLAGS} -c $< -o ${<:.c=.o} ${INCLUDE}
 
 clean:
 		@echo "\n$(NAME): $(RED)object files were deleted$(RESET)"
