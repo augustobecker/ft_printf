@@ -90,12 +90,12 @@ bonus:		${NAME} ${BONUS_OBJS}
 		@echo "\n$(NAME): $(GREEN)object files were created$(RESET)"
 
 clean:
-		@echo "\n$(NAME):	$(RED)object files were deleted$(RESET)"
+		@echo "\n$(NAME): $(RED)object files were deleted$(RESET)"
 		${REMOVE} ${OBJS} ${BONUS_OBJS}
 		@echo
 
 fclean:		clean
-		@echo "$(NAME):	$(RED)$(NAME) was deleted$(RESET)"
+		@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
 		${REMOVE} ${NAME}
 		@echo
 
