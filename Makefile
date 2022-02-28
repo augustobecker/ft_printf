@@ -30,7 +30,7 @@ INCLUDE 	= -I ${LIB_PATH}
 
 SRCS_PATH	= ./ft_printf
 
-SRCS 		= ${SRCS_PATH}/ft_printf.c		        \
+SRCS 		= ${SRCS_PATH}/ft_printf.c			\
 		${SRCS_PATH}/ft_argument_c.c			\
 		${SRCS_PATH}/ft_arguments_d_i.c			\
 		${SRCS_PATH}/ft_argument_p.c			\
@@ -39,7 +39,7 @@ SRCS 		= ${SRCS_PATH}/ft_printf.c		        \
 		${SRCS_PATH}/ft_argument_u.c			\
 		${SRCS_PATH}/ft_arguments_x.c			\
 		${SRCS_PATH}/ft_is_argument.c			\
-		${SRCS_PATH}/ft_print_reversed_str.c	        \
+		${SRCS_PATH}/ft_print_reversed_str.c		\
 		${SRCS_PATH}/ft_free_ptr.c			\
 		${SRCS_PATH}/ft_hex_length.c			\
 		${SRCS_PATH}/ft_decimal_length.c		\
@@ -50,16 +50,18 @@ OBJS 		= $(SRCS:.c=.o)
 all:		${NAME}
 
 ${NAME}: 	${OBJS} ${LIBFT}
+		@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 		ar -rcs ${NAME} ${OBJS}
-		@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)\n"
+		@echo
 
 ${LIBFT}:
+		@echo
 		make bonus -C libft
 		cp ${LIBFT} ${NAME}
 
 .c.o:
-		${CC} -c ${FLAGS} $< -o ${<:.c=.o} ${INCLUDE}
 		@echo "\n$(NAME): $(GREEN)object files were created$(RESET)"
+		${CC} -c ${FLAGS} $< -o ${<:.c=.o} ${INCLUDE}
 
 clean:
 		make clean -C libft
