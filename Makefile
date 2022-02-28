@@ -63,15 +63,15 @@ ${LIBFT}:
 
 clean:
 		make clean -C libft
-		@echo "\n$(NAME):	$(RED)object files were deleted$(RESET)"
+		@echo "\n$(NAME): $(RED)object files were deleted$(RESET)"
 		${REMOVE} ${OBJS}
 		@echo
 
 fclean:
 		make fclean -C libft
-		@echo "\n$(NAME):	$(RED)object files were deleted$(RESET)"
+		@echo "\n$(NAME): $(RED)object files were deleted$(RESET)"
 		${REMOVE} ${OBJS}
-		@echo "\n$(NAME):	$(RED)$(NAME) was deleted$(RESET)"
+		@echo "\n$(NAME): $(RED)$(NAME) was deleted$(RESET)"
 		${REMOVE} ${NAME}
 		@echo
 
