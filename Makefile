@@ -6,7 +6,7 @@
 #    By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/28 20:37:12 by acesar-l          #+#    #+#              #
-#    Updated: 2022/02/22 04:23:44 by acesar-l         ###   ########.fr        #
+#    Updated: 2022/02/28 13:23:44 by acesar-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,9 @@ FLAGS 		= -Wall -Werror -Wextra
 REMOVE 		= rm -f
 INCLUDE 	= -I ${LIB_PATH}
 
-SRCS_PATH	= ./printf
+SRCS_PATH	= ./ft_printf
 
-SRCS 		= ${SRCS_PATH}/ft_printf.c			\
+SRCS 		= ${SRCS_PATH}/ft_printf.c		        \
 		${SRCS_PATH}/ft_argument_c.c			\
 		${SRCS_PATH}/ft_arguments_d_i.c			\
 		${SRCS_PATH}/ft_argument_p.c			\
@@ -39,7 +39,7 @@ SRCS 		= ${SRCS_PATH}/ft_printf.c			\
 		${SRCS_PATH}/ft_argument_u.c			\
 		${SRCS_PATH}/ft_arguments_x.c			\
 		${SRCS_PATH}/ft_is_argument.c			\
-		${SRCS_PATH}/ft_print_reversed_str.c		\
+		${SRCS_PATH}/ft_print_reversed_str.c	        \
 		${SRCS_PATH}/ft_free_ptr.c			\
 		${SRCS_PATH}/ft_hex_length.c			\
 		${SRCS_PATH}/ft_decimal_length.c		\
@@ -51,7 +51,7 @@ all:		${NAME}
 
 ${NAME}: 	${OBJS} ${LIBFT}
 		ar -rcs ${NAME} ${OBJS}
-		@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
+		@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)\n"
 
 ${LIBFT}:
 		make bonus -C libft
@@ -63,13 +63,17 @@ ${LIBFT}:
 
 clean:
 		make clean -C libft
+		@echo "\n$(NAME):	$(RED)object files were deleted$(RESET)"
 		${REMOVE} ${OBJS}
-		@echo "$(NAME): $(RED)object files were deleted$(RESET)"
+		@echo
 
-fclean:		clean
+fclean:
 		make fclean -C libft
+		@echo "\n$(NAME):	$(RED)object files were deleted$(RESET)"
+		${REMOVE} ${OBJS}
+		@echo "\n$(NAME):	$(RED)$(NAME) was deleted$(RESET)"
 		${REMOVE} ${NAME}
-		@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
+		@echo
 
 re :		fclean all
 
