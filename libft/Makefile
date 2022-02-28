@@ -6,7 +6,7 @@
 #    By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/07 17:02:42 by acesar-l          #+#    #+#              #
-#    Updated: 2022/02/19 16:17:16 by acesar-l         ###   ########.fr        #
+#    Updated: 2022/02/28 13:17:16 by acesar-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ BONUS_SRCS  =	ft_lstadd_back.c	\
 		ft_lstlast.c		\
 		ft_lstmap.c		\
 		ft_lstnew.c		\
-		ft_lstsize.c
+		ft_lstsize.c	
 
 OBJS 		= $(SRCS:.c=.o)
 
@@ -79,23 +79,25 @@ all:		${NAME}
 
 ${NAME}: 	${OBJS}
 		ar -rcs ${NAME} ${OBJS}
-		@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
+		@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)\n"
 
 bonus:		${NAME} ${BONUS_OBJS}
 		ar -rcs ${NAME} ${BONUS_OBJS}
-		@echo "$(NAME): $(GREEN)$(NAME) was created with Bonus$(RESET)"
+		@echo "\n$(NAME): $(GREEN)$(NAME) was created with Bonus$(RESET)\n"
 
 .c.o:
 		${CC} ${FLAGS} -c $< -o ${<:.c=.o} ${INCLUDE}
 		@echo "\n$(NAME): $(GREEN)object files were created$(RESET)"
 
 clean:
+		@echo "\n$(NAME):	$(RED)object files were deleted$(RESET)"
 		${REMOVE} ${OBJS} ${BONUS_OBJS}
-		@echo "$(NAME): $(RED)object files were deleted$(RESET)"
+		@echo
 
 fclean:		clean
+		@echo "$(NAME):	$(RED)$(NAME) was deleted$(RESET)"
 		${REMOVE} ${NAME}
-		@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
+		@echo
 
 re :		fclean all
 
