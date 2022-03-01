@@ -88,7 +88,7 @@ Now to clean up (removing the .o files), call make clean:
     make clean
 Now you just have to add this header at your .c files and use the ft_printf function or any other from the library:
 
-    #include "ft_printf.h"
+    #include "library/ft_printf.h"
 If you try to compile your .c files with clang using "clang example.c" you will get an undefined symbol error for Libftprintf functions.
 
 You have to tell the file which library it's using:
