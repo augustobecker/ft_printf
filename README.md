@@ -91,13 +91,9 @@ Now you just have to add this header at your .c files and use the ft_printf func
     #include "ft_printf.h"
 If you try to compile your .c files with clang using "clang example.c" you will get an undefined symbol error for Libftprintf functions.
 
-You have to tell the file where your library resides and which library it's using:
+You have to tell the file which library it's using:
 
-    clang example.c -L library -lftprintf
-
--L takes the path to your library. library in this case
-
--l takes the name of your library. This is the set of characters that come after lib in your library name.
+    clang example.c libftprintf.a
 
 That's it. Now run it using ./a.out
 
