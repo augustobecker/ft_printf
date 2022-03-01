@@ -89,7 +89,7 @@ Agora, para limpar tudo (remover os arquivos .o), use make clean:
     make clean
 Agora, só precisa adicionar esse cabeçalho nos seus arquivos .c e usar as funções da Libftprintf:
 
-    #include "ft_printf.h"
+    #include "library/ft_printf.h"
 Se tentar compilar seus arquivos com clang usando "clang exemplo.c" vai receber um erro de undefined symbol para as funções da biblioteca.
 
 Você deve mostrar qual é a biblioteca:
