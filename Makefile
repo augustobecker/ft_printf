@@ -38,7 +38,6 @@ SRCS 		= ${SRCS_PATH}/ft_printf.c			\
 		${SRCS_PATH}/ft_argument_s.c			\
 		${SRCS_PATH}/ft_argument_u.c			\
 		${SRCS_PATH}/ft_arguments_x.c			\
-		${SRCS_PATH}/ft_is_argument.c			\
 		${SRCS_PATH}/ft_print_reversed_str.c		\
 		${SRCS_PATH}/ft_free_ptr.c			\
 		${SRCS_PATH}/ft_hex_length.c			\
