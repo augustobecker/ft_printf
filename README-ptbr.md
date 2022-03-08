@@ -3,7 +3,8 @@
 <p align="center">:information_source: Uma biblioteca estática que contém a função ft_printf, uma re-implementação da printf real </p>
 
 <p align="center"><a href="https://www.42sp.org.br/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=SP&color=000&style=for-the-badge&logo=42""></a></p>
-
+<p align="center"><img src="https://user-images.githubusercontent.com/81205527/157133425-69e61e0d-9051-4733-87cb-844319544a8b.png"> </p>
+<p align="center"> <strong>100/100</strong> ✔️ </p>
 <p align="center"><a href="https://github.com/augustobecker/ft_printf/blob/main/README.md"><img src="https://img.shields.io/badge/available%20in-EN-blue"></a></p>
 
 ## Índice
