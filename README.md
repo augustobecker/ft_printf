@@ -14,6 +14,8 @@
 * [How does it work?](#how-does-it-work)
 * [How do I use the library?](#how-do-i-use-the-library)
 * [How do I test it?](#how-do-i-test-it)
+* [Makefile](#makefile)
+	* [Colorful Makefile](#colorful-makefile)
 * [Author](#author)
 
 <h2 align="center" id="what-is-ft-printf"> What is ft_printf? </h2>
@@ -126,6 +128,102 @@ In case that your project or another project you are going to evaluate has a bon
 If you did everything correctly you should see something like this:
     ![68747470733a2f2f692e696d6775722e636f6d2f556549375048612e706e67](https://user-images.githubusercontent.com/81205527/151406246-07d3bf2b-9c63-4f00-aca9-266f2ee32034.png)
 
+  <h2 align="center" id="makefile"> Makefile </h2>
+
+<p align="center">:information_source: A handy automation tool to Run and compile your programs more efficiently.	</p>
+	
+A Makefile defines set of tasks to be executed, in shell script. These tasks are writed on a target in this format:
+	
+	target: prerequisites
+	<TAB> recipe
+
+such as:
+	
+	fclean:	clean
+		@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
+		${REMOVE} ${NAME}
+		@echo
+
+The recipe(the commands @echo and so forth) for the target fclean will only be executed when the target clean (the prerequisite) be executed.
+a target works without prerequisites too:
+	
+	clean:
+		@echo "\n$(NAME): $(RED)object files were deleted$(RESET)"
+		${REMOVE} ${OBJS} ${BONUS_OBJS}
+		@echo
+	
+As you could see, there are a few variables inside the recipe. The variables can be assigned just as follow:
+	
+	GREEN		= \033[0;32m
+	RED		= \033[0;31m
+	RESET		= \033[0m
+	CC		= clang
+	FLAGS 		= -Wall -Werror -Wextra
+
+To use the variable value, just use the $ sign with parenthesis:
+	
+	@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
+
+Using variables makes your Makefile more readable and easily modifiable. Try it :)
+
+It is not necessary for the target to be a file. It could be just a name for the recipe, just as above. We call these phony targets.
+	
+But if you have a file with the exact name of your phony target inside of your repo, things can get a little weird.
+To protected your Makefile from this, just use phony and the name of all your phony targets used:
+	
+	.PHONY:		all clean fclean re bonus
+
+Here at 42 school, the subject says that
+>Your Makefile must at least contain the rules $(NAME), all, clean, fclean and re.
+	
+The rules are the target, just name some of them as $(NAME), all, clean, fclean and re.
+	
+The rule **$(NAME)**, in this case, should create the **$(NAME)** static library.
+	
+**all** is used to make the principal goal of your Makefile: create the $(NAME) static library.
+	
+**clean** removes the objects created to make the library.
+	
+**fclean** removes the objects created to make the library and the **$(NAME)**.
+	
+**re** just removes the objects created to make the library and the **$(NAME)**, to then recompile everything.
+
+You can run a rule on your Makefile this way:
+
+	make $(target_name)
+	
+such as:
+	
+	make clean
+	
+In the case of the target all, just type make
+	
+	make
+
+<h3 align="center" id="colorful-makefile"> Colorful Makefile </h3>
+	
+Choose your color, add it as a variable and use in your Makefile:
+
+	BLACK		="\[\033[0;30m\]"        
+	RED		="\[\033[0;31m\]"       
+	GREEN		="\[\033[0;32m\]"      
+	YELLOW		="\[\033[0;33m\]"       
+	BLUE		="\[\033[0;34m\]"        
+	PURPLE		="\[\033[0;35m\]"     
+	CYAN		="\[\033[0;36m\]"         
+	WHITE		="\[\033[0;37m\]"    
+	RESET		="\033[0m"
+
+You could use it this way:
+	
+	@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
+	
+So $(NAME) was deleted will be printed in red.
+
+Cool, right?
+	
+Remember to reset the color when you're done, otherwise your terminal will keep with the last used colour.
+   
 <h2 align="center" id="author"> Author </h2>
 <div>
     <img height="180em" src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png">
