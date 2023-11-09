@@ -25,12 +25,15 @@ jobs:
     - name: Lint with norminette
       run: |
         norminette
-   compilation:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /
-    steps:
-      - name: Compiling with Makefile
-        run: |
-          make
+    - name: Compiling with Makefile
+      run: |
+        make
+   # compilation:
+   #  runs-on: ubuntu-latest
+   #  defaults:
+   #    run:
+   #      working-directory: /
+   #  steps:
+   #    - name: Compiling with Makefile
+   #      run: |
+   #        make
