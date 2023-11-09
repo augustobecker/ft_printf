@@ -31,7 +31,7 @@ jobs:
     needs: norminette
     defaults:
       run:
-        working-directory:  /
+        working-directory:  ft_printf
     steps:
       - name: Compiling with Makefile
         run: |
