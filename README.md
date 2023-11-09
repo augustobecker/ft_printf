@@ -257,3 +257,4 @@ To see other projects developed by me at 42, click here: <a href="https://github
 	<a href="https://discord.gg/3kxYkBRxUy" target="_blank"><img align="center" alt="Discord - beckerzz#3614" height="60" src="https://user-images.githubusercontent.com/81205527/157161820-de88dc63-61a3-4c9f-9445-07ac98bf0bc2.png"></a>
 	</div>
 </div>
+
