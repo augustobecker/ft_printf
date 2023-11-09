@@ -33,4 +33,4 @@ jobs:
         run: |
           pwd ;
           make
-        
+        working-directory: ../
