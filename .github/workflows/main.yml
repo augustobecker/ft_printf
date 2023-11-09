@@ -31,6 +31,5 @@ jobs:
     steps:
       - name: Compiling with Makefile
         run: |
-          pwd ;
           make
         working-directory: ../../ft_printf
