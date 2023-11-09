@@ -28,6 +28,7 @@ jobs:
       working-directory: printf
   compilation:
     runs-on: ubuntu-latest
+    needs: norminette
     steps:
       - name: Compiling with Makefile
         run: |
