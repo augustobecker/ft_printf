@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory:  printf
+        working-directory:  .
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -25,6 +25,7 @@ jobs:
     - name: Lint with norminette
       run: |
         norminette
+      working-directory: printf
   compilation:
     runs-on: ubuntu-latest
     steps:
@@ -32,5 +33,4 @@ jobs:
         run: |
           pwd ;
           make
-        working-directory: .
         
