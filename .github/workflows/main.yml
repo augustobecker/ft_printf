@@ -35,5 +35,4 @@ jobs:
     steps:
       - name: Compiling with Makefile
         run: |
-          pwd ;
-          make
+          pwd 
