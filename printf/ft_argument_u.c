@@ -20,7 +20,7 @@ static void	ft_put_unsigned_nbr(unsigned int nbr)
 	{
 		ft_put_unsigned_nbr(nbr / 10);
 		ft_put_unsigned_nbr(nbr % 10);
-	}	
+	}
 }
 
 int	ft_argument_u(unsigned int nbr)

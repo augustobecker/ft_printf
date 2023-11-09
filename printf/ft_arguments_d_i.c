@@ -33,7 +33,7 @@ static void	ft_putnbr(int nbr)
 	{
 		ft_putnbr(nbr / 10);
 		ft_putnbr(nbr % 10 + sum);
-	}	
+	}
 }
 
 int	ft_arguments_d_i(int c)
