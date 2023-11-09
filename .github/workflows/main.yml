@@ -1,5 +1,5 @@
 
-name: norminette
+name: fantastic
 
 on:
   push:
@@ -25,3 +25,9 @@ jobs:
     - name: Lint with norminette
       run: |
         norminette
+  compilation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compiling with Makefile
+        run: |
+          make
