@@ -4,7 +4,7 @@ name: norminette
 on:
   push:
     branches:
-      - main
+      - dojo
       
 jobs:
   norminette:
