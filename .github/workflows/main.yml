@@ -7,7 +7,7 @@ on:
       - dojo
       
 jobs:
-  norminette:
+   norminette:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -25,3 +25,12 @@ jobs:
     - name: Lint with norminette
       run: |
         norminette
+   compilation:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /
+    steps:
+      - name: Compiling with Makefile
+        run: |
+          make
