@@ -4,14 +4,14 @@ name: norminette
 on:
   push:
     branches:
-      - master
+      - main
       
 jobs:
   norminette:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory:  src
+        working-directory:  /
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
