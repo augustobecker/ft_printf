@@ -27,11 +27,10 @@ jobs:
         norminette
   compilation:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory:  /
     steps:
       - name: Compiling with Makefile
         run: |
           pwd ;
           make
+        working-directory: .
+        
