@@ -30,4 +30,6 @@ jobs:
     steps:
       - name: Compiling with Makefile
         run: |
+          pwd
+        run: |
           make
